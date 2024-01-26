@@ -17,6 +17,11 @@ public class ClienteResource {
     @Autowired
     private ClienteService clienteService;
 
+    @GetMapping("/tester")
+    public String testeMsClientes() {
+        return "Ok, operante...";
+    }
+
     @GetMapping
     public ResponseEntity buscar(@RequestParam String cpf){
         Optional<Cliente> cliente = clienteService.buscarClientePorCpf(cpf);
