@@ -10,7 +10,7 @@ public class ClienteInput {
 
     private String cpf;
     private String nome;
-    private String idade;
+    private Integer idade;
 
     public Cliente toModel(){
         return new Cliente(cpf, nome, idade);
